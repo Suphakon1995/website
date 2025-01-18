@@ -1,9 +1,7 @@
 
 version 2
 updates
-  package-ecosystem npm
+  package-ecosystem
     directory /
     schedule
       interval weekly
-    allow
-      dependency-type
