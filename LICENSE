@@ -2,16 +2,9 @@ Except as otherwise noted, the content of this repository is licensed under the
 Creative Commons Attribution 4.0 License [1], and code and code samples are
 licensed under the Apache License, Version 2.0 [2].
 
-Copyright 2013-present etcd Authors. All rights reserved.
-
-[1]: https://creativecommons.org/licenses/by/4.0, a copy is included below.
-[2]: https://apache.org/licenses/LICENSE-2.0
-
----
-
+Copyright 2013-present etcd Authors. All rights reserved
 Creative Commons Attribution 4.0 International
 
-=======================================================================
 
 Creative Commons Corporation ("Creative Commons") is not a law firm and
 does not provide legal services or legal advice. Distribution of
@@ -44,7 +37,7 @@ exhaustive, and do not form part of our licenses.
      material not subject to the license. This includes other CC-
      licensed material, or material used under an exception or
      limitation to copyright. More considerations for licensors:
-     wiki.creativecommons.org/Considerations_for_licensors
+
 
      Considerations for the public: By using one of our public
      licenses, a licensor grants the public permission to use the
