@@ -1,11 +1,1 @@
-# cSpell:ignore Kubernetes
-- name: Kubernetes
-  # date: 20yy-mm-dd
-  link: https://kubernetes.io
-  image: https://raw.githubusercontent.com/cncf/artwork/master/projects/kubernetes/horizontal/color/kubernetes-horizontal-color.png
-  quote: >
-    etcd is the backend for service discovery and stores cluster state and configuration
-- name: Rook
-  # date: 20yy-mm-dd
-  link: https://rook.io
-  image: https://raw.githubusercontent.com/cncf/artwork/master/projects/rook/horizontal/color/rook-horizontal-color.png
+  
