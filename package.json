@@ -1,4 +1,1 @@
-{
-  "scripts": {
-    "_check-links": "make check-links",
-    "build-and-serve": "npm run build && npm run serve
+
