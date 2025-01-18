@@ -2,46 +2,6 @@
 # This script updates the version of the release in the release file
 # Usage: ./update_release_version.sh <new_version>
 
-set -eo pipefail
-
-if [ "$#" -ne 1 ]; then
-  echo "Usage: $0 <new_version>"
-  exit 1
-fi
-
-new_version="$1"
-release_minor=$(echo "${new_version}" | cut -d. -f1-2)
-index_file=content/en/docs/"${release_minor}"/_index.md
-git_remote="${GIT_REMOTE:-origin}"
-branch="release-${release_minor}-update-latest-release-to-${new_version}"
-current_branch=$(git symbolic-ref HEAD --short)
-
-if [ -z "${GITHUB_ACTIONS}" ]; then
-  git_author="$(git config user.name)"
-  git_email="$(git config user.email)"
-else
-  # Refer to https://github.com/orgs/community/discussions/26560#discussioncomment-3252340
-  git_author="github-actions[bot]"
-  git_email="41898282+github-actions[bot]@users.noreply.github.com"
-fi
-
-# Check for prerequisites to run the script.
-if ! which gh >/dev/null; then
-  echo "gh needs to be installed for this script to work"
-  exit 1
-fi
-if ! gh auth status >/dev/null; then
-  echo "gh needs to be authenticated for this script to work"
-  exit 1
-fi
-if ! grep git_version_tag "${index_file}" | grep -v -e "${new_version}\$" >/dev/null; then
-  echo "nothing to do; file ${index_file} is already up to date with ${new_version}"
-  exit 0
-fi
-if git ls-remote --exit-code "${git_remote}" --heads refs/heads/"${branch}" >/dev/null; then
-  echo "nothing to do; branch ${branch} already exists"
-  exit 0
-fi
 
 # Switch to a new branch.
 git checkout -b "${branch}"
